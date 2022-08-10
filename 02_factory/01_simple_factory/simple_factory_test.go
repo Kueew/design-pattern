@@ -1,4 +1,4 @@
-package facctory
+package factory
 
 import (
 	"reflect"
@@ -39,7 +39,7 @@ func TestNewRuleConfigParser(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			if parser := NewRuleConfigParser(tt.args.t); !reflect.DeepEqual(&parser, &tt.target) {
-				t.Errorf("NewIRuleConfigParser() = %v ,target %v", parser, tt.target)
+				t.Errorf("NewRuleConfigParser() = %v ,target %v", parser, tt.target)
 			}
 		})
 	}
